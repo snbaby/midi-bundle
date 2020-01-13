@@ -1,0 +1,10 @@
+/.settings
+/midi-aas-processor/.settings
+/midi-helios-processor/.settings
+/midi-helios-processor/target
+/midi-aas-processor/target
+/.project
+/midi-helios-processor/.classpath
+/midi-helios-processor/.project
+/midi-jk-processor/target
+/midi-jk-processor/.settings

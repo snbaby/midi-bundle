@@ -1,0 +1,34 @@
+--- !!com.seadun.midi.aas.yml.Application
+server:
+  port: 8082
+  datasources:
+#      -
+#        name: ds_141
+#        url: jdbc:mysql://192.168.2.141:3306/aas?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF8
+#        driverClassName: com.mysql.cj.jdbc.Driver
+#        userName: root
+#        password: 123456
+#      -
+#        name: ds_178
+#        url: jdbc:mysql://192.168.2.178:3306/aas?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF8
+#        driverClassName: com.mysql.cj.jdbc.Driver
+#        userName: root
+#        password: 123456
+#      -
+#        name: ds_180
+#        url: jdbc:mysql://192.168.2.180:3306/aas?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF8
+#        driverClassName: com.mysql.cj.jdbc.Driver
+#        userName: root
+#        password: 123456
+#      -
+#        name: ds_4
+#        url: jdbc:oracle:thin:@//192.168.2.153:1521/TEST
+#        driverClassName: oracle.jdbc.driver.OracleDriver
+#        userName: professional2
+#        password: 123456
+      -
+        name: ds_all
+        url: jdbc:mysql://0.0.0.0:3306/aas?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF8
+        driverClassName: com.mysql.cj.jdbc.Driver
+        userName: root
+        password: 123456

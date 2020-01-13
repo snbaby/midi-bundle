@@ -1,0 +1,176 @@
+--- !!com.seadun.midi.aas.yml.Application
+
+init:
+  roles:
+    -
+      code: administrator
+      name: 系统管理
+      description: 管理系统
+    -
+      code: security
+      name: 系统安全
+      description: 管理授权
+    -
+      code: auditor
+      name: 系统审计
+      description: 系统审计
+  users:
+    -
+      code: administrator
+      name: 系统管理员 ##人员名
+      nickName: 系统管理员 ##用户名
+      securityClassification: 3 ##0-非涉密人员 1- 一般涉密人员 2- 重要涉密人员 3- 核心涉密人员
+      password: 21A54DDF576017976CB62B6CAA882A3C6A515516865B72A6AF0DB5C37597E5B15156B3684B8A90C61E62CDAB33D2EE0FB35A0A192C9A882CE3E586F261A51B71$1
+      salt: 16F3E4552083784DD4FA1F35AF94AD1EC2AD125F8D0B06D8D1A07A46C30C3679
+      roles:
+        - administrator
+    -
+      code: security
+      name: 安全保密管理员 ##人员名
+      nickName: 安全保密管理员 ##用户名
+      securityClassification: 3 ##0-非涉密人员 1- 一般涉密人员 2- 重要涉密人员 3- 核心涉密人员
+      password: F049FB34A9DD3470094FC0E7DE50E95115DF1BEC60F751B12E054F871A9F925799797A5E1465B603FFE9931102C3CBB095887E141B8BB82BFB80FDCC47918454$1
+      salt: A25D4722F9544620C32222EB935301A1F21D63DFC9621E1E92C9694F0B23693F
+      roles:
+        - security
+    -
+      code: auditor
+      name: 系统审计员 ##人员名
+      nickName: 系统审计员 ##用户名
+      securityClassification: 3 ##0-非涉密人员 1- 一般涉密人员 2- 重要涉密人员 3- 核心涉密人员
+      password: 096F451B2AE61706EC88870F8B42174153F831A6604E42B8351E8139CD87C14552AFCA6FE101F20140631913CD811DA25777E92B878D787BF435F63ADBA6A465$1
+      salt: 6582A4D4AB87DE478E51DB49E3AD2AD6C80782F5FFAC81F743AE261DF48411AF
+      roles:
+        - auditor        
+  menus:
+    #总控
+    -
+      name: 总控中心
+      uri: /control
+      type: 0
+    -
+      name: 分控中心
+      uri: /place/:code
+      type: 0
+    -
+      name: 设备管理
+      uri: /equipments
+      type: 0
+    -
+      name: 告警信息
+      uri: /alarms
+      type: 0
+    #分控
+    
+#    -
+#      name: 监控中心
+#      uri: /place
+#      type: 0
+#    -
+#      name: 设备管理
+#      uri: /equipment
+#      type: 0
+#    -
+#      name: 告警信息
+#      uri: /alarm
+#      type: 0
+#    -
+#      name: 流程申请
+#      uri: /process-apply/:type/:code
+#      type: 0
+#    -
+#      name: 流程监控
+#      uri: /process-all
+#      type: 0
+#    -
+#      name: 任务中心
+#      uri: /process-me
+#      type: 0
+    
+    #所有
+    -
+      name: 系统管理
+      uri: /system
+      type: 4
+      children:
+        -
+          name: 系统设置
+          uri: /system/administrator
+          type: 4
+          children:
+            -
+              name: 组织人员管理
+              uri: /system/administrator/org-station-person
+              type: 4
+            -
+              name: 岗位设置
+              uri: /system/administrator/station
+              type: 4
+            -
+              name: 角色管理
+              uri: /system/administrator/role
+              type: 4
+            -
+              name: 数据源管理
+              uri: /system/administrator/dataSource
+              type: 4
+        -
+          name: 安全设置
+          uri: /system/security
+          type: 4
+          children:
+            -
+              name: 授权管理
+              uri: /system/security/role-resource-user
+              type: 4
+            -
+              name: 用户管理
+              uri: /system/security/user
+              type: 4
+        -
+          name: 日志审计
+          uri: /system/auditor
+          type: 4
+          children:
+            -
+              name: 登录日志
+              uri: /system/auditor/log-login
+              type: 4
+            -
+              name: 访问日志
+              uri: /system/auditor/log-module
+              type: 4
+            -
+              name: 操作日志
+              uri: /system/auditor/log-db
+              type: 4
+            -
+              name: 安全员日志
+              uri: /system/auditor/log-security
+              type: 4
+    -
+      name: 个人设置
+      uri: /security-settings
+      type: 4
+
+shardTbs:
+  - tb_app
+  - tb_app_resource_relation
+  - tb_db_log
+  - tb_duty
+  - tb_login_log
+  - tb_model_log
+  - tb_org
+  - tb_org_person_relation
+  - tb_org_station_relation
+  - tb_person
+  - tb_resource
+  - tb_role
+  - tb_role_app_relation
+  - tb_role_resource_relation
+  - tb_role_user_relation
+  - tb_station
+  - tb_station_duty_relation
+  - tb_tosr_person_relation
+  - tb_user
+      

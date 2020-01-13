@@ -1,0 +1,17 @@
+--- !!com.seadun.midi.equipment.jk.Application
+
+server:
+  port: 8083
+  datasources:
+      -
+        code: ds_总控
+        name: ds_总控场所
+        url: jdbc:mysql://0.0.0.0:3306/aas?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF8
+        driverClassName: com.mysql.cj.jdbc.Driver
+        userName: root
+        password: 123456
+        status: true
+
+
+
+

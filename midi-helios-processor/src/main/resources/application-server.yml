@@ -1,0 +1,39 @@
+--- !!com.seadun.midi.equipment.yml.Application
+
+server:
+  port: 8081
+  datasources:
+    #      -
+    #        code: ds_141
+    #        name: ds_141场所
+    #        url: jdbc:mysql://192.168.2.141:3306/helios?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF8
+    #        driverClassName: com.mysql.cj.jdbc.Driver
+    #        userName: root
+    #        password: 123456
+    #        status: true
+    #      -
+    #        code: ds_178
+    #        name: ds_178场所
+    #        url: jdbc:mysql://192.168.2.178:3306/helios?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF8
+    #        driverClassName: com.mysql.cj.jdbc.Driver
+    #        userName: root
+    #        password: 123456
+    #        status: true
+#            -
+#              code: ds_180
+#              name: ds_180场所
+#              url: jdbc:mysql://192.168.2.180:3306/aas?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF8
+#              driverClassName: com.mysql.cj.jdbc.Driver
+#              userName: root
+#              password: 123456
+#              status: true
+    - name: ds_aas
+      url: jdbc:mysql://0.0.0.0:3306/aas?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF8
+      driverClassName: com.mysql.cj.jdbc.Driver
+      userName: root
+      password: 123456
+      status: true
+
+
+
+      

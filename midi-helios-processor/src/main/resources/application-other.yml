@@ -1,0 +1,18 @@
+--- !!com.seadun.midi.equipment.yml.Application
+
+shardTbs:
+  - alarm
+  - area
+  - detect
+  - cabinet
+  - dic_equipment_type
+  - dic_secret_code
+  - equipment
+  - equipment_location_relation
+  - location
+  - port
+  - port_location_relation
+  - process
+
+
+      
